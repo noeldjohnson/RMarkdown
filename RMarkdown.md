@@ -16,6 +16,12 @@ This is a package that allows me to round results neatly.
 For example:
 
 
+```r
+x <- rnorm(100)
+y <- 2*x + rnorm(100)
+myround(cor(x, y), 2)
+```
+
 ```
 ## [1] "0.91"
 ```
@@ -49,7 +55,7 @@ The initial line in a code chunk may include various options. For example, echo=
 
 
 ```
-## [1] 0.929371
+## [1] 0.889853
 ```
 
 You use results='hide' to hide the results/output (but here the code would still be displayed).

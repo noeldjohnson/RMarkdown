@@ -20,7 +20,7 @@ library(broman)
 
 For example:
 
-```{r rounding_example, include=TRUE}
+```{r rounding_example, include=TRUE, echo=TRUE}
 x <- rnorm(100)
 y <- 2*x + rnorm(100)
 myround(cor(x, y), 2)
