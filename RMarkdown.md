@@ -55,7 +55,7 @@ The initial line in a code chunk may include various options. For example, echo=
 
 
 ```
-## [1] 0.889853
+## [1] 0.8857847
 ```
 
 You use results='hide' to hide the results/output (but here the code would still be displayed).
