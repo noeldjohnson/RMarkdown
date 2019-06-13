@@ -14,23 +14,9 @@ knitr::opts_chunk$set(echo = TRUE)
 This is an opening sentence to describe my R workflow.
 
 ```{r}
-#Here is some sample code from Geocomputation with R
 
-#Chapter 2: Geographic Data in R
-library(sf)          # classes and functions for vector data
-library(raster)      # classes and functions for raster data
-library(spData)        # load geographic data
-library(spDataLarge)   # load larger geographic data
+# my test code
 
-#install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
-
-#setwd("/Users/noeljohnson/Dropbox/Research/R Templates/SpatialAnalysis")
-
-names(world)
-plot(world)
-
-summary(world["lifeExp"])
-plot(world["lifeExp"])
 ```
 
 That's the end of my markdown test.
