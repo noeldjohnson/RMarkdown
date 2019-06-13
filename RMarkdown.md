@@ -9,6 +9,17 @@ output:
 
 
 
+This is a package that allows me to round results neatly.
+
+
+
+For example:
+
+
+```
+## [1] "0.91"
+```
+
 This is a simple example of a Markdown document.
 
 Use a blank link between paragraphs.
@@ -38,7 +49,7 @@ The initial line in a code chunk may include various options. For example, echo=
 
 
 ```
-## [1] 0.8838977
+## [1] 0.929371
 ```
 
 You use results='hide' to hide the results/output (but here the code would still be displayed).
