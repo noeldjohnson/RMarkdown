@@ -32,14 +32,28 @@ page.
 
 You can include blocks of code using three backticks:
 
+![](Figs/simulate_data-1.png)<!-- -->
 
-```r
-x <- rnorm(100)
-y <- 2*x + rnorm(100)
-plot(x, y)
+The initial line in a code chunk may include various options. For example, echo=FALSE indicates that the code will not be shown in the final document (though any results/output would still be displayed).
+
+
+```
+## [1] 0.8838977
 ```
 
-![](RMarkdown_files/figure-html/simulate_data-1.png)<!-- -->
+You use results='hide' to hide the results/output (but here the code would still be displayed).
+
+
+
+You use include=FALSE to have the chunk evaluated, but neither the code nor its output displayed.
+
+
+
+If I’m writing a report for a collaborator, I’ll often use include=FALSE to suppress all of the code and largely just include figures.
+
+For figures, you’ll want to use options like fig.width and fig.height. For example:
+
+![](Figs/scatterplot-1.png)<!-- -->
 
 That's the end of my markdown test.
 

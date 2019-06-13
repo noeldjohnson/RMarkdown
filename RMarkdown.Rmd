@@ -7,8 +7,9 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/',
+                      echo=FALSE, warning=FALSE, message=FALSE)
 ```
 
 This is a simple example of a Markdown document.
@@ -38,6 +39,38 @@ You can include blocks of code using three backticks:
 x <- rnorm(100)
 y <- 2*x + rnorm(100)
 plot(x, y)
+```
+
+The initial line in a code chunk may include various options. For example, echo=FALSE indicates that the code will not be shown in the final document (though any results/output would still be displayed).
+
+```{r chunk_name, echo=FALSE}
+x <- rnorm(100)
+y <- 2*x + rnorm(100)
+cor(x, y)
+```
+
+You use results='hide' to hide the results/output (but here the code would still be displayed).
+
+```{r chunk_name2, results='hide'}
+x <- rnorm(100)
+y <- 2*x + rnorm(100)
+cor(x, y)
+```
+
+You use include=FALSE to have the chunk evaluated, but neither the code nor its output displayed.
+
+```{r chunk_name3, include=FALSE}
+x <- rnorm(100)
+y <- 2*x + rnorm(100)
+cor(x, y)
+```
+
+If I’m writing a report for a collaborator, I’ll often use include=FALSE to suppress all of the code and largely just include figures.
+
+For figures, you’ll want to use options like fig.width and fig.height. For example:
+
+```{r scatterplot, fig.width=8, fig.height=6}
+plot(x,y)
 ```
 
 That's the end of my markdown test.
