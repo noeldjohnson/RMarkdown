@@ -37,6 +37,7 @@ You can include blocks of code using three backticks:
 ```{r simulate_data}
 x <- rnorm(100)
 y <- 2*x + rnorm(100)
+plot(x, y)
 ```
 
 That's the end of my markdown test.

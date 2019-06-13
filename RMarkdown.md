@@ -21,18 +21,6 @@ Here's a list:
 - another item
 - yet another item
 
-You can include blocks of code using three backticks:
-
-```
-x <- rnorm(100)
-y <- 2*x + rnorm(100)
-```
-
-Or you could indent four spaces:
-
-    mean(x)
-    sd(x)
-
 It'll figure out numbered lists, too:
 
 1. First item
@@ -42,6 +30,16 @@ And it's easy to create links, like to
 the [Markdown](https://daringfireball.net/projects/markdown/)
 page.
 
+You can include blocks of code using three backticks:
+
+
+```r
+x <- rnorm(100)
+y <- 2*x + rnorm(100)
+plot(x, y)
+```
+
+![](RMarkdown_files/figure-html/simulate_data-1.png)<!-- -->
 
 That's the end of my markdown test.
 
