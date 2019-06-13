@@ -16,6 +16,7 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 
+
 ```r
 summary(cars)
 ```
@@ -28,6 +29,20 @@ summary(cars)
 ##  Mean   :15.4   Mean   : 42.98  
 ##  3rd Qu.:19.0   3rd Qu.: 56.00  
 ##  Max.   :25.0   Max.   :120.00
+```
+
+```r
+head(cars)
+```
+
+```
+##   speed dist
+## 1     4    2
+## 2     4   10
+## 3     7    4
+## 4     7   22
+## 5     8   16
+## 6     9   10
 ```
 
 ## Including Plots
