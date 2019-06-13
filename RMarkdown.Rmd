@@ -11,24 +11,28 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+This is an opening sentence to describe my R workflow.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r}
+#Here is some sample code from Geocomputation with R
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+#Chapter 2: Geographic Data in R
+library(sf)          # classes and functions for vector data
+library(raster)      # classes and functions for raster data
+library(spData)        # load geographic data
+library(spDataLarge)   # load larger geographic data
 
+#install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
 
-```{r cars}
-summary(cars)
-head(cars)
+#setwd("/Users/noeljohnson/Dropbox/Research/R Templates/SpatialAnalysis")
+
+names(world)
+plot(world)
+
+summary(world["lifeExp"])
+plot(world["lifeExp"])
 ```
 
-## Including Plots
+That's the end of my markdown test.
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

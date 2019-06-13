@@ -9,46 +9,92 @@ output:
 
 
 
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
+This is an opening sentence to describe my R workflow.
 
 
 ```r
-summary(cars)
+#Here is some sample code from Geocomputation with R
+
+#Chapter 2: Geographic Data in R
+library(sf)          # classes and functions for vector data
 ```
 
 ```
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
+## Warning: package 'sf' was built under R version 3.5.2
+```
+
+```
+## Linking to GEOS 3.6.1, GDAL 2.1.3, PROJ 4.9.3
 ```
 
 ```r
-head(cars)
+library(raster)      # classes and functions for raster data
 ```
 
 ```
-##   speed dist
-## 1     4    2
-## 2     4   10
-## 3     7    4
-## 4     7   22
-## 5     8   16
-## 6     9   10
+## Warning: package 'raster' was built under R version 3.5.2
 ```
 
-## Including Plots
+```
+## Loading required package: sp
+```
 
-You can also embed plots, for example:
+```r
+library(spData)        # load geographic data
+```
 
-![](RMarkdown_files/figure-html/pressure-1.png)<!-- -->
+```
+## Warning: package 'spData' was built under R version 3.5.2
+```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```r
+library(spDataLarge)   # load larger geographic data
+
+#install.packages("spDataLarge", repos = "https://nowosad.github.io/drat/", type = "source")
+
+#setwd("/Users/noeljohnson/Dropbox/Research/R Templates/SpatialAnalysis")
+
+names(world)
+```
+
+```
+##  [1] "iso_a2"    "name_long" "continent" "region_un" "subregion"
+##  [6] "type"      "area_km2"  "pop"       "lifeExp"   "gdpPercap"
+## [11] "geom"
+```
+
+```r
+plot(world)
+```
+
+```
+## Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to
+## plot all
+```
+
+![](RMarkdown_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+
+```r
+summary(world["lifeExp"])
+```
+
+```
+##     lifeExp                 geom    
+##  Min.   :50.62   MULTIPOLYGON :177  
+##  1st Qu.:64.96   epsg:4326    :  0  
+##  Median :72.87   +proj=long...:  0  
+##  Mean   :70.85                      
+##  3rd Qu.:76.78                      
+##  Max.   :83.59                      
+##  NA's   :10
+```
+
+```r
+plot(world["lifeExp"])
+```
+
+![](RMarkdown_files/figure-html/unnamed-chunk-1-2.png)<!-- -->
+
+That's the end of my markdown test.
+
+
